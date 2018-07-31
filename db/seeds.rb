@@ -16,11 +16,6 @@
 #   Ingredient.create(name: item["strIngredient1"])
 # end
 
-
-# Ingredient.create(name: "lemon")
-# Ingredient.create(name: "ice")
-# Ingredient.create(name: "mint leaves")
-
 require 'faker'
 
 20.times do

@@ -1,2 +1,20 @@
-<%= @cocktail.name %>
+
+
+<div class="wrapper container-buffer">
+<h2><%= @cocktail.name %></h2>
+  <div class="container">
+    <div class="row">
+      <ul>
+      <% @cocktail.doses.each do |t| %>
+        <div class="col-xs-6 col-sm-4 col-md-3">
+            <li><h3><%= t.ingredient.name %></h3> <%= t.description %></li>
+            <%= link_to "Delete dose", dose_path(t.id), method: :delete %>
+        </div>
+      <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<%= link_to "New Ingredient", new_cocktail_dose_path(@cocktail) %>
 
